@@ -7,7 +7,7 @@
     background-color: aquamarine;
 }
 .blackcell {
-    background-color: black;
+    background-color: #484848;
 }
 .col {
     font-size: 20px;
@@ -22,7 +22,7 @@
 img {
     display: block;
     margin: 0 auto;
-    width: 80%;
+    width: 70%;
 }
 
 .row {
