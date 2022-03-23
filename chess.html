@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="CSS/chess.css">
+</head>
+<body>
+<div id="playerR">
+</div>
+<div id="chessboarddiv">
+    <table id="chessboard" border="1">
+        <tr class="columnborder">
+            <th></th>
+            <th class="col">A</th>
+            <th class="col">B</th>
+            <th class="col">C</th>
+            <th class="col">D</th>
+            <th class="col">E</th>
+            <th class="col">F</th>
+            <th class="col">G</th>
+            <th class="col">H</th>
+            <th></th>
+        </tr>
+        <tr>
+            <th class="row"><strong>8</strong></th>
+            <td><img src=".\Chess\BPawn.png"></td>
+            <td class="blackcell"></td>
+            <td></td>
+            <td class="blackcell"></td>
+            <td></td>
+            <td class="blackcell"></td>
+            <td></td>
+            <td class="blackcell"></td>
+            <th class="row"><strong>8</strong></th>
+        </tr>
+        <tr>
+            <th class="row"><strong>7</strong></th>
+            <td class="blackcell"></td>
+            <td></td>
+            <td class="blackcell"></td>
+            <td></td>
+            <td class="blackcell"></td>
+            <td></td>
+            <td class="blackcell"></td>
+            <td></td>
+            <th class="row"><strong>7</strong></th>
+        </tr>
+        <tr>
+            <th class="row"><strong>6</strong></th>
+            <td></td>
+            <td class="blackcell"></td>
+            <td></td>
+            <td class="blackcell"></td>
+            <td></td>
+            <td class="blackcell"></td>
+            <td></td>
+            <td class="blackcell"></td>
+            <th class="row"><strong>6</strong></th>
+        </tr>
+        <tr>
+            <th class="row"><strong>5</strong></th>
+            <td class="blackcell"></td>
+            <td></td>
+            <td class="blackcell"></td>
+            <td></td>
+            <td class="blackcell"></td>
+            <td></td>
+            <td class="blackcell"></td>
+            <td></td>
+            <th class="row"><strong>5</strong></th>
+        </tr>
+        <tr>
+            <th class="row"><strong>4</strong></th>
+            <td></td>
+            <td class="blackcell"></td>
+            <td></td>
+            <td class="blackcell"></td>
+            <td></td>
+            <td class="blackcell"></td>
+            <td></td>
+            <td class="blackcell"></td>
+            <th class="row"><strong>4</strong></th>
+        </tr>
+        <tr>
+            <th class="row"><strong>3</strong></th>
+            <td class="blackcell"></td>
+            <td></td>
+            <td class="blackcell"></td>
+            <td></td>
+            <td class="blackcell"></td>
+            <td></td>
+            <td class="blackcell"></td>
+            <td></td>
+            <th class="row"><strong>3</strong></th>
+        </tr>
+        <tr>
+            <th class="row"><strong>2</strong></th>
+            <td></td>
+            <td class="blackcell"></td>
+            <td></td>
+            <td class="blackcell"></td>
+            <td></td>
+            <td class="blackcell"></td>
+            <td></td>
+            <td class="blackcell"></td>
+            <th class="row"><strong>2</strong></th>
+        </tr>
+        <tr>
+            <th class="row"><strong>1</strong></th>
+            <td class="blackcell"></td>
+            <td></td>
+            <td class="blackcell"></td>
+            <td></td>
+            <td class="blackcell"></td>
+            <td></td>
+            <td class="blackcell"></td>
+            <td></td>
+            <th class="row"><strong>1</strong></th>
+        </tr>
+        <tr class="columnborder">
+            <th></th>
+            <th class="col">A</th>
+            <th class="col">B</th>
+            <th class="col">C</th>
+            <th class="col">D</th>
+            <th class="col">E</th>
+            <th class="col">F</th>
+            <th class="col">G</th>
+            <th class="col">H</th>
+            <th></th>
+        </tr>
+    </table>
+</div>
+<div id="playerB"></div>
+<script src="JS/Chess.js"></script>
+<script src="JS/Move/Move.js"></script>
+<script src="JS/Move/Pawn.js"></script>
+</body>
+</html>
