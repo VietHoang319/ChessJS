@@ -43,3 +43,24 @@ function getMove(x, y) {
         }
     }
 }
+
+/* Kiểm tra id chuyển đến và di chuyển đến vị trí đã chọn */
+function checkMoveChess(id, newid) {
+    let check = true;
+    if (id.localeCompare(newid) === 0) {
+        check =  false;
+        return check;
+    }
+    else {
+        document.getElementById("i" + newid).src = document.getElementById("i" + id).src;
+        document.getElementById("i" + id).src = "";
+        let x1 = id.charAt(0);
+        let y1 = id.charAt(1);
+        let x2 = newid.charAt(0);
+        let y2 = newid.charAt(1);
+        arrMap[x2][y2] = arrMap[x1][y1]
+        arrMap[x1][y1] = " ";
+        console.log(arrMap)
+        return check;
+    }
+}

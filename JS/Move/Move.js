@@ -1,3 +1,4 @@
+// Hàm lấy hướng di chuyển của quân cờ
 function howToMove(chess, team, x, y) {
     switch (chess) {
         case "pawn":
@@ -15,9 +16,15 @@ function howToMove(chess, team, x, y) {
         case "queen":
             moveQueen(team, x, y);
             break;
+        // case "king":
+        //     moveKing(team, x, y);
+        //     break;
+        default:
+            isClick = !isClick;
     }
 }
 
+// Bắt sự kiện click cho từng ô thuộc lớp "cell"
 let cells = document.getElementsByClassName("cell")
 for (let i = 0; i < cells.length; i++) {
     cells[i].addEventListener("click", function () {
@@ -30,6 +37,13 @@ function click(id) {
     let y = id.charAt(1);   // hàng
     isClick = !isClick;
     if(isClick) {
+        position = id;
         getMove(x, y);
+    }
+    else {
+        if (checkMoveChess(position, id)){
+            flag = !flag;
+        }
+        drawCell();
     }
 }

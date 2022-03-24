@@ -2,6 +2,7 @@ let flag = true;
 let isClick = false;
 let arrMap = [];
 let arrChess = [];
+let position = "";
 
 function initialization() {
     drawCell();
@@ -61,8 +62,8 @@ function initializationChess() {
     arrMap[0][4] = rKing.name;
     arrMap[7][4] = bKing.name;
 
-    arrMap[4][4] = bQueen.name;
-    document.getElementById(`i44`).src = bQueen.img;
+    // arrMap[4][4] = bQueen.name;
+    // document.getElementById(`i44`).src = bQueen.img;
 }
 
 function drawCell() {
