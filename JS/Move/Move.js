@@ -6,6 +6,15 @@ function howToMove(chess, team, x, y) {
         case "knight":
             moveKnight(team, x, y);
             break;
+        case "bishop":
+            moveBishop(team, x, y);
+            break;
+        case "rook":
+            moveRook(team, x, y);
+            break;
+        case "queen":
+            moveQueen(team, x, y);
+            break;
     }
 }
 

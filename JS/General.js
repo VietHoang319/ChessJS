@@ -1,7 +1,3 @@
-function isRedTeam(x, y) {
-
-}
-
 function getTeam(x, y) {
     let name = arrMap[x][y];
     let team = "";

@@ -61,8 +61,8 @@ function initializationChess() {
     arrMap[0][4] = rKing.name;
     arrMap[7][4] = bKing.name;
 
-    arrMap[4][4] = rKnight.name;
-    document.getElementById(`i44`).src = rKnight.img;
+    arrMap[4][4] = bQueen.name;
+    document.getElementById(`i44`).src = bQueen.img;
 }
 
 function drawCell() {
