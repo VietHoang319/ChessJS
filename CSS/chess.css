@@ -1,14 +1,18 @@
 #chessboard {
-    border: 1px solid black;
+    border: 2px solid black;
     border-collapse: collapse;
 }
 
-#chessboard td:hover {
-    background-color: aquamarine;
+.cell:hover {
+    border-collapse: collapse;
+    border-style: solid;
+    border-color: aquamarine;
 }
-.blackcell {
-    background-color: #484848;
+
+.cell {
+    border-width: 3px;
 }
+
 .col {
     font-size: 20px;
     height: 40px;
