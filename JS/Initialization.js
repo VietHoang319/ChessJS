@@ -16,11 +16,12 @@ let moveBlackRook1 = true; // biến kiểm tra xe đen bên trái
 let moveBlackRook2 = true; // biến kiểm tra xe đen bên phải
 let moveRedKing = true;    // biến kiểm tra vua đỏ
 let moveBlackKing = true;  // biến kiểm tra vua đen
+let redWin = false;
+let blackWin = false;
 
 function initialization() {
     drawCell();
     initializationChess();
-    console.log(arrMap)
 }
 
 function initializationChess() {

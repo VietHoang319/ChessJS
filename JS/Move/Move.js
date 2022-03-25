@@ -72,6 +72,14 @@ function click(id) {
     else {
         if (checkMoveChess(position, id)){
             // console.log(arrMap);
+            if (redWin === true) {
+                alert('Người chơi đỏ thắng');
+                location.reload();
+            }
+            if (blackWin === true) {
+                alert('Người chơi đen thắng');
+                location.reload();
+            }
             flag = !flag;
         }
         arrMove.splice(0, arrMove.length);

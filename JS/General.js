@@ -20,12 +20,21 @@ function checkMoveChess(id, newid) {
         return check;
     }
     else {
-        document.getElementById("i" + newid).src = document.getElementById("i" + id).src;
-        document.getElementById("i" + id).src = "";
         let x1 = id.charAt(0);
         let y1 = id.charAt(1);
         let x2 = newid.charAt(0);
         let y2 = newid.charAt(1);
+
+        if (arrMap[x2][y2] === "rKing") {
+            blackWin = true;
+        }
+        if (arrMap[x2][y2] === "bKing") {
+            redWin = true;
+        }
+
+        document.getElementById("i" + newid).src = document.getElementById("i" + id).src;
+        document.getElementById("i" + id).src = "";
+        getMoveSound();
 
         arrMap[x2][y2] = arrMap[x1][y1];
         arrMap[x1][y1] = " ";
@@ -129,4 +138,9 @@ function isRedTeam(x, y) {
         check = true;
     }
     return check;
+}
+
+function getMoveSound() {
+    let audio = new Audio('ChessMoveSound.mp3');
+    audio.play();
 }
