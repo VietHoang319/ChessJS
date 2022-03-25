@@ -33,14 +33,26 @@ function moveKing(team, a, b) {
         changeColor(x, y - 1)
         arrMove.push(`${x}${y-1}`);
     }
-    // if (team === "r" && x === 0 && y === 4) {
-    //     if (checkXY(x, y + 1) && getTeam(x, y + 2) !== team) {
-    //         changeColor(x, y + 1)
-    //     }
-    // }
-    // if (team === "b" && x === 7 && y === 4) {
-    //     if (checkXY(x, y + 1) && getTeam(x, y + 2) !== team) {
-    //         changeColor(x, y + 2)
-    //     }
-    // }
+
+    if (team === "r" && moveRedKing === true && checkmateR === false) {
+        if (checkXY(x, y + 2) && getTeam(x, y + 2) === "" && getTeam(x, y + 1) === "" && moveRedRook2 === true) {
+            changeColor(x, y + 2)
+            arrMove.push(`${x}${y+2}`);
+        }
+        if (checkXY(x, y - 2) && getTeam(x, y - 2) === "" && getTeam(x, y - 1) === "" && getTeam(x, y - 3) === "" && moveRedRook1 === true) {
+            changeColor(x, y - 2)
+            arrMove.push(`${x}${y-2}`);
+        }
+    }
+
+    if (team === "b" && moveBlackKing === true && checkmateB === false) {
+        if (checkXY(x, y + 2) && getTeam(x, y + 2) === "" && getTeam(x, y + 1) === "" && moveBlackRook2 === true) {
+            changeColor(x, y + 2)
+            arrMove.push(`${x}${y+2}`);
+        }
+        if (checkXY(x, y - 2) && getTeam(x, y - 2) === "" && getTeam(x, y - 1) === "" && getTeam(x, y - 3) === "" && moveBlackRook1 === true) {
+            changeColor(x, y - 2)
+            arrMove.push(`${x}${y-2}`);
+        }
+    }
 }

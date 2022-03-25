@@ -30,6 +30,7 @@ function checkMoveChess(id, newid) {
         arrMap[x2][y2] = arrMap[x1][y1];
         arrMap[x1][y1] = " ";
 
+        // Phong hậu
         if (arrMap[x2][y2] === "rPawn" && x2 === "7") {
             arrMap[x2][y2] = "rQueen";
             document.getElementById("i" + newid).src = "../Pic/Chess/RQueen.png";
@@ -39,6 +40,59 @@ function checkMoveChess(id, newid) {
             document.getElementById("i" + newid).src = "../Pic/Chess/BQueen.png";
         }
 
+        if (arrMap[x2][y2] === "rRook1") {
+            moveRedRook1 = false;
+        }
+
+        if (arrMap[x2][y2] === "rRook2") {
+            moveRedRook2 = false;
+        }
+
+        if (arrMap[x2][y2] === "bRook1") {
+            moveBlackRook1 = false;
+        }
+
+        if (arrMap[x2][y2] === "bRook2") {
+            moveBlackRook2 = false;
+        }
+
+        // Vua đỏ nhập thành
+        if (arrMap[x2][y2] === "rKing") {
+            if (x2 === "0" && y2 === "6") {
+                arrMap[0][5] = arrMap[0][7];
+                arrMap[0][7] = " ";
+                document.getElementById("i05").src = document.getElementById("i07").src;
+                document.getElementById("i07").src = "";
+                moveRedKing = false;
+            }
+            if (x2 === "0" && y2 === "2") {
+                arrMap[0][3] = arrMap[0][0];
+                arrMap[0][0] = " ";
+                document.getElementById("i03").src = document.getElementById("i00").src;
+                document.getElementById("i00").src = "";
+                moveRedKing = false;
+            }
+        }
+
+        // Vua đen nhập thành
+        if (arrMap[x2][y2] === "bKing") {
+            if (x2 === "7" && y2 === "6") {
+                arrMap[7][5] = arrMap[7][7];
+                arrMap[7][7] = " ";
+                document.getElementById("i75").src = document.getElementById("i77").src;
+                document.getElementById("i77").src = "";
+                moveRedKing = false;
+            }
+            if (x2 === "7" && y2 === "2") {
+                arrMap[7][3] = arrMap[7][0];
+                arrMap[7][0] = " ";
+                document.getElementById("i73").src = document.getElementById("i70").src;
+                document.getElementById("i70").src = "";
+                moveRedKing = false;
+            }
+        }
+
+        // Kiểm tra chiếu vua
         if (getTeam(x2, y2) === "r") {
             let a = checkR.charAt(0);
             let b = checkR.charAt(1);
@@ -64,7 +118,6 @@ function checkMoveChess(id, newid) {
                 checkmateB = false;
             }
         }
-
         getCheckmate(+x2, +y2);
         return check;
     }

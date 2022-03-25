@@ -1,19 +1,26 @@
-let flag = true;
+let flag = true;    // biến cờ đỏ đi trước
 let isClick = false;
-let arrMap = [];
-let arrChess = [];
-let arrMove = [];
-let position = "";
-let checkmateR = false;
-let checkmateB = false;
+let arrMap = [];    // Ma trận bàn cờ
+let arrChess = [];  // Ma trận quân cờ chứa các đối tượng cờ
+let arrMove = [];   // Ma trận chứa các lướt đi gợi ý
+let position = "";  // Biến lưu vị trí trước
+let checkmateR = false; // Biến kiểm tra đã chiếu vua đỏ chưa
+let checkmateB = false; // Biến kiểm tra đã chiếu vua đen chưa
 let checkR = "";    // Vị trí ô chiếu vua đỏ
 let checkB = "";    // Vị trí ô chiếu vua đen
 let chessCheckR = "";   // Quân chiếu vua đỏ
 let chessCheckB = "";   // Quân chiếu vua đen
+let moveRedRook1 = true;   // biến kiểm tra xe đỏ bên trái
+let moveRedRook2 = true;   // biến kiểm tra xe đỏ bên phải
+let moveBlackRook1 = true; // biến kiểm tra xe đen bên trái
+let moveBlackRook2 = true; // biến kiểm tra xe đen bên phải
+let moveRedKing = true;    // biến kiểm tra vua đỏ
+let moveBlackKing = true;  // biến kiểm tra vua đen
 
 function initialization() {
     drawCell();
     initializationChess();
+    console.log(arrMap)
 }
 
 function initializationChess() {
