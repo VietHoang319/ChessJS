@@ -37,3 +37,46 @@ let bQueen = new Chess("bQueen", "queen", "b", "../Pic/Chess/BQueen.png");
 
 arrChess = [rPawn, bPawn, rRook1, rRook2, bRook1, bRook2, rKing, bKing, rKnight, bKnight, rBishop, bBishop, rQueen, bQueen];
 
+function getMove(x, y) {
+    let name = arrMap[x][y];
+    for (let i = 0; i < arrChess.length; i++) {
+        if (name === arrChess[i].name) {
+            arrChess[i].move(x, y);
+            break;
+        }
+    }
+}
+
+function getCheckmate(x, y) {
+    let name = arrMap[x][y];
+    for (let i = 0; i < arrChess.length; i++) {
+        if (name === arrChess[i].name) {
+            arrChess[i].checkmate(x, y);
+            break;
+        }
+    }
+}
+
+function getChess(x, y) {
+    let name = arrMap[x][y];
+    let chess = "";
+    for (let i = 0; i < arrChess.length; i++) {
+        if (name === arrChess[i].name) {
+            chess = arrChess[i].chess;
+            break;
+        }
+    }
+    return chess;
+}
+
+function getTeam(x, y) {
+    let name = arrMap[x][y];
+    let team = "";
+    for (let i = 0; i < arrChess.length; i++) {
+        if (name === arrChess[i].name) {
+            team = arrChess[i].team;
+            break;
+        }
+    }
+    return team;
+}

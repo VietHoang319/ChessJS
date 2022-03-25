@@ -6,8 +6,10 @@ let arrMove = [];
 let position = "";
 let checkmateR = false;
 let checkmateB = false;
-let checkR = "";
-let checkB = "";
+let checkR = "";    // Vị trí ô chiếu vua đỏ
+let checkB = "";    // Vị trí ô chiếu vua đen
+let chessCheckR = "";   // Quân chiếu vua đỏ
+let chessCheckB = "";   // Quân chiếu vua đen
 
 function initialization() {
     drawCell();
@@ -77,11 +79,11 @@ function drawCell() {
             let b = j + 1;
             document.getElementById(i.toString() + j.toString()).style.backgroundColor = "rgb(255,255,255)";
             if(a % 2 !== 0 ){
-                if(b % 2 === 0)
+                if(b % 2 === 1)
                     document.getElementById(i.toString() + j.toString()).style.backgroundColor = "rgb(72, 72, 72)";
             }
             else{
-                if(b % 2 !== 0)
+                if(b % 2 !== 1)
                     document.getElementById(i.toString() + j.toString()).style.backgroundColor = "rgb(72, 72, 72)";
             }
         }

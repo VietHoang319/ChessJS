@@ -59,7 +59,6 @@ function click(id) {
     if(isClick) {
         position = id;
         getMove(x, y);
-        console.log(arrMove)
     }
     else {
         if (checkMoveChess(position, id)){
@@ -67,31 +66,24 @@ function click(id) {
         }
         arrMove.splice(0, arrMove.length);
         drawCell();
-        if (checkmateR === true) {
-            for (let i = 0; i < 8; i++) {
-                for (let j = 0; j < 8; j++) {
-                    if (arrMap[i][j] === "rKing") {
-                        document.getElementById(`${i}${j}`).style.backgroundColor = "rgb(255,123,70)";
-                        break;
-                    }
-                }
-            }
-        }
-        else {
-            drawCell();
-        }
         if (checkmateB === true) {
             for (let i = 0; i < 8; i++) {
                 for (let j = 0; j < 8; j++) {
                     if (arrMap[i][j] === "bKing") {
                         document.getElementById(`${i}${j}`).style.backgroundColor = "rgb(255,123,70)";
-                        break;
                     }
                 }
             }
         }
-        else {
-            drawCell();
+
+        if (checkmateR === true) {
+            for (let i = 0; i < 8; i++) {
+                for (let j = 0; j < 8; j++) {
+                    if (arrMap[i][j] === "rKing") {
+                        document.getElementById(`${i}${j}`).style.backgroundColor = "rgb(255,123,70)";
+                    }
+                }
+            }
         }
     }
 }

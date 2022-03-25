@@ -1,57 +1,15 @@
-function getTeam(x, y) {
-    let name = arrMap[x][y];
-    let team = "";
-    for (let i = 0; i < arrChess.length; i++) {
-        if (name === arrChess[i].name) {
-            team = arrChess[i].team;
-            break;
-        }
-    }
-    return team;
-}
-
+// Đổi màu ô
 function changeColor(x, y){
     document.getElementById(x.toString() + y.toString()).style.backgroundColor = "#F6CD61";
 }
 
+// Kiểm tra xem có trong kích thước ma trận không
 function checkXY(x, y) {
     let f = false;
     if (x >= 0 && x <= 7 && y <=7 && y >= 0) {
         f = true;
     }
     return f;
-}
-
-function getChess(x, y) {
-    let name = arrMap[x][y];
-    let chess = "";
-    for (let i = 0; i < arrChess.length; i++) {
-        if (name === arrChess[i].name) {
-            chess = arrChess[i].chess;
-            break;
-        }
-    }
-    return chess;
-}
-
-function getMove(x, y) {
-    let name = arrMap[x][y];
-    for (let i = 0; i < arrChess.length; i++) {
-        if (name === arrChess[i].name) {
-            arrChess[i].move(x, y);
-            break;
-        }
-    }
-}
-
-function getCheckmate(x, y) {
-    let name = arrMap[x][y];
-    for (let i = 0; i < arrChess.length; i++) {
-        if (name === arrChess[i].name) {
-            arrChess[i].checkmate(x, y);
-            break;
-        }
-    }
 }
 
 /* Kiểm tra id chuyển đến và di chuyển đến vị trí đã chọn */
@@ -71,9 +29,8 @@ function checkMoveChess(id, newid) {
 
         arrMap[x2][y2] = arrMap[x1][y1];
         arrMap[x1][y1] = " ";
-        getCheckmate(+x2, +y2);
+
         if (arrMap[x2][y2] === "rPawn" && x2 === "7") {
-            console.log(1)
             arrMap[x2][y2] = "rQueen";
             document.getElementById("i" + newid).src = "../Pic/Chess/RQueen.png";
         }
@@ -81,7 +38,34 @@ function checkMoveChess(id, newid) {
             arrMap[x2][y2] = "bQueen";
             document.getElementById("i" + newid).src = "../Pic/Chess/BQueen.png";
         }
-        console.log(arrMap)
+
+        if (getTeam(x2, y2) === "r") {
+            let a = checkR.charAt(0);
+            let b = checkR.charAt(1);
+            if (arrMap[+a][+b] === chessCheckR) {
+                getCheckmate(+a, +b);
+            }
+            else {
+                checkR = "";
+                chessCheckR = "";
+                checkmateR = false;
+            }
+        }
+
+        if (getTeam(x2, y2) === "b") {
+            let a = checkB.charAt(0);
+            let b = checkB.charAt(1);
+            if (arrMap[+a][+b] === chessCheckB) {
+                getCheckmate(+a, +b);
+            }
+            else {
+                checkB = "";
+                chessCheckB = "";
+                checkmateB = false;
+            }
+        }
+
+        getCheckmate(+x2, +y2);
         return check;
     }
 }
