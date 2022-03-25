@@ -56,12 +56,21 @@ function click(id) {
     let x = id.charAt(0);   // cột
     let y = id.charAt(1);   // hàng
     isClick = !isClick;
+
+    if(isClick){
+        // Quân đỏ đi trước
+        if(isRedTeam(x, y) !== flag){
+            isClick = !isClick;
+        }
+    }
+
     if(isClick) {
         position = id;
         getMove(x, y);
     }
     else {
         if (checkMoveChess(position, id)){
+            // console.log(arrMap);
             flag = !flag;
         }
         arrMove.splice(0, arrMove.length);

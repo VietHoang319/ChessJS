@@ -69,3 +69,11 @@ function checkMoveChess(id, newid) {
         return check;
     }
 }
+
+function isRedTeam(x, y) {
+    let check = false;
+    if (getTeam(x, y) === "r") {
+        check = true;
+    }
+    return check;
+}
