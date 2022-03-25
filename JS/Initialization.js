@@ -4,11 +4,14 @@ let arrMap = [];
 let arrChess = [];
 let arrMove = [];
 let position = "";
+let checkmateR = false;
+let checkmateB = false;
+let checkR = "";
+let checkB = "";
 
 function initialization() {
     drawCell();
     initializationChess();
-    console.log(arrMap);
 }
 
 function initializationChess() {

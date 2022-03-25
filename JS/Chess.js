@@ -14,6 +14,10 @@ class Chess {
     move(x, y) {
         howToMove(this.chess, this.team, x, y);
     }
+
+    checkmate(x, y) {
+        checkCheckmate(this.chess, this.team, x, y);
+    }
 }
 
 let rPawn = new Chess("rPawn", "pawn", "r", "../Pic/Chess/RPawn.png");

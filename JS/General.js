@@ -44,10 +44,20 @@ function getMove(x, y) {
     }
 }
 
+function getCheckmate(x, y) {
+    let name = arrMap[x][y];
+    for (let i = 0; i < arrChess.length; i++) {
+        if (name === arrChess[i].name) {
+            arrChess[i].checkmate(x, y);
+            break;
+        }
+    }
+}
+
 /* Kiểm tra id chuyển đến và di chuyển đến vị trí đã chọn */
 function checkMoveChess(id, newid) {
     let check = true;
-    if (id.localeCompare(newid) === 0 || arrMove.indexOf(newid) === -1 || getChess(+id[0], +id[1]) === " ") {
+    if (id.localeCompare(newid) === 0 || arrMove.indexOf(newid) === -1) {
         check =  false;
         return check;
     }
@@ -58,11 +68,19 @@ function checkMoveChess(id, newid) {
         let y1 = id.charAt(1);
         let x2 = newid.charAt(0);
         let y2 = newid.charAt(1);
-        // if (arrMap[x1][y1] === "rRook2") {
-        //
-        // }
+
         arrMap[x2][y2] = arrMap[x1][y1];
         arrMap[x1][y1] = " ";
+        getCheckmate(+x2, +y2);
+        if (arrMap[x2][y2] === "rPawn" && x2 === "7") {
+            console.log(1)
+            arrMap[x2][y2] = "rQueen";
+            document.getElementById("i" + newid).src = "../Pic/Chess/RQueen.png";
+        }
+        if (arrMap[x2][y2] === "bPawn" && x2 === "0") {
+            arrMap[x2][y2] = "bQueen";
+            document.getElementById("i" + newid).src = "../Pic/Chess/BQueen.png";
+        }
         console.log(arrMap)
         return check;
     }

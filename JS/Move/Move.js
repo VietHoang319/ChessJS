@@ -24,6 +24,26 @@ function howToMove(chess, team, x, y) {
     }
 }
 
+function checkCheckmate(chess, team, x, y) {
+    switch (chess) {
+        case "pawn":
+            checkmatePawn(team, x, y);
+            break;
+        case "knight":
+            checkmateKnight(team, x, y);
+            break;
+        case "bishop":
+            checkmateBishop(team, x, y);
+            break;
+        case "rook":
+            checkmateRook(team, x, y)
+            break;
+        case "queen":
+            checkmateQueen(team, x, y);
+            break;
+    }
+}
+
 // Bắt sự kiện click cho từng ô thuộc lớp "cell"
 let cells = document.getElementsByClassName("cell")
 for (let i = 0; i < cells.length; i++) {
@@ -47,5 +67,31 @@ function click(id) {
         }
         arrMove.splice(0, arrMove.length);
         drawCell();
+        if (checkmateR === true) {
+            for (let i = 0; i < 8; i++) {
+                for (let j = 0; j < 8; j++) {
+                    if (arrMap[i][j] === "rKing") {
+                        document.getElementById(`${i}${j}`).style.backgroundColor = "rgb(255,123,70)";
+                        break;
+                    }
+                }
+            }
+        }
+        else {
+            drawCell();
+        }
+        if (checkmateB === true) {
+            for (let i = 0; i < 8; i++) {
+                for (let j = 0; j < 8; j++) {
+                    if (arrMap[i][j] === "bKing") {
+                        document.getElementById(`${i}${j}`).style.backgroundColor = "rgb(255,123,70)";
+                        break;
+                    }
+                }
+            }
+        }
+        else {
+            drawCell();
+        }
     }
 }
