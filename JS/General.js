@@ -47,7 +47,7 @@ function getMove(x, y) {
 /* Kiểm tra id chuyển đến và di chuyển đến vị trí đã chọn */
 function checkMoveChess(id, newid) {
     let check = true;
-    if (id.localeCompare(newid) === 0) {
+    if (id.localeCompare(newid) === 0 || arrMove.indexOf(newid) === -1 || getChess(+id[0], +id[1]) === " ") {
         check =  false;
         return check;
     }
@@ -58,7 +58,10 @@ function checkMoveChess(id, newid) {
         let y1 = id.charAt(1);
         let x2 = newid.charAt(0);
         let y2 = newid.charAt(1);
-        arrMap[x2][y2] = arrMap[x1][y1]
+        // if (arrMap[x1][y1] === "rRook2") {
+        //
+        // }
+        arrMap[x2][y2] = arrMap[x1][y1];
         arrMap[x1][y1] = " ";
         console.log(arrMap)
         return check;

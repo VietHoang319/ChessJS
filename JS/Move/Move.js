@@ -16,9 +16,9 @@ function howToMove(chess, team, x, y) {
         case "queen":
             moveQueen(team, x, y);
             break;
-        // case "king":
-        //     moveKing(team, x, y);
-        //     break;
+        case "king":
+            moveKing(team, x, y);
+            break;
         default:
             isClick = !isClick;
     }
@@ -39,11 +39,13 @@ function click(id) {
     if(isClick) {
         position = id;
         getMove(x, y);
+        console.log(arrMove)
     }
     else {
         if (checkMoveChess(position, id)){
             flag = !flag;
         }
+        arrMove.splice(0, arrMove.length);
         drawCell();
     }
 }

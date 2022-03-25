@@ -2,6 +2,7 @@ let flag = true;
 let isClick = false;
 let arrMap = [];
 let arrChess = [];
+let arrMove = [];
 let position = "";
 
 function initialization() {

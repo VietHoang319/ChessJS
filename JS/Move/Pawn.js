@@ -9,18 +9,22 @@ function movePawn(team, a, b) {
                         break;
                     }
                     if (arrMap[x + i][y] === " ") {
+                        arrMove.push(`${x + i}${y}`);
                         changeColor(x + i, y)
                     }
                 }
             } else {
                 if (arrMap[x + 1][y] === " ") {
+                    arrMove.push(`${x + 1}${y}`);
                     changeColor(x + 1, y)
                 }
             }
             if (getTeam(x + 1, y - 1) === "b" && x + 1 <= 7 && y - 1 >= 0) {
+                arrMove.push(`${x + 1}${y - 1}`);
                 changeColor(x + 1, y - 1);
             }
             if (getTeam(x + 1, y + 1) === "b" && x + 1 <= 7 && y + 1 >= 0) {
+                arrMove.push(`${x + 1}${y + 1}`);
                 changeColor(x + 1, y + 1);
             }
             break;
@@ -31,19 +35,22 @@ function movePawn(team, a, b) {
                         break;
                     }
                     if (arrMap[x - i][y] === " ") {
+                        arrMove.push(`${x - i}${y}`);
                         changeColor(x - i, y)
                     }
                 }
             } else {
                 if (arrMap[x - 1][y] === " ") {
+                    arrMove.push(`${x - 1}${y}`);
                     changeColor(x - 1, y)
                 }
             }
             if (getTeam(x - 1, y - 1) === "r" && x - 1 <= 7 && y - 1 >= 0) {
-                console.log(1)
+                arrMove.push(`${x - 1}${y - 1}`);
                 changeColor(x - 1, y - 1);
             }
             if (getTeam(x - 1, y + 1) === "r" && x - 1 <= 7 && y + 1 >= 0) {
+                arrMove.push(`${x - 1}${y + 1}`);
                 changeColor(x - 1, y + 1);
             }
             break;
