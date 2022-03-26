@@ -53,23 +53,23 @@ img {
     width: 40px;
 }
 
-@media only screen and (max-width: 1300px) {
-    #playerBdiv {
-        width: 0;
-    }
-    #chessboarddiv {
-        width: 73%;
-    }
-    #playerRdiv {
-        width: 23%;
-    }
-}
+/*@media only screen and (max-width: 1300px) {*/
+/*    #playerBdiv {*/
+/*        width: 0;*/
+/*    }*/
+/*    #chessboarddiv {*/
+/*        width: 73%;*/
+/*    }*/
+/*    #playerRdiv {*/
+/*        width: 23%;*/
+/*    }*/
+/*}*/
 
-@media only screen and (max-width: 1000px) {
-    #chessboarddiv {
-        width: 96%;
-    }
-    #playerRdiv {
-        width: 0;
-    }
-}
+/*@media only screen and (max-width: 1000px) {*/
+/*    #chessboarddiv {*/
+/*        width: 96%;*/
+/*    }*/
+/*    #playerRdiv {*/
+/*        width: 0;*/
+/*    }*/
+/*}*/
