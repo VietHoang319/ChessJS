@@ -32,9 +32,21 @@ function checkMoveChess(id, newid) {
             redWin = true;
         }
 
+        if (arrMap[x2][y2] !== "") {
+            let text = getImg(x2, y2);
+            let team = getTeam(x2, y2)
+            if (team === "b") {
+                blackChessDead.innerHTML += `<div style="height: 10%; width: 15%; float: left; margin: 2%"><img style="width: 100%; height: 100%" src= ${text}></div>`;
+            }
+            if (team === "r") {
+                redChessDead.innerHTML += `<div style="height: 10%; width: 15%; float: left; margin: 2%"><img style="width: 100%; height: 100%" src= ${text}></div>`;
+            }
+        }
+
         document.getElementById("i" + newid).src = document.getElementById("i" + id).src;
         document.getElementById("i" + id).src = "";
         getMoveSound();
+
 
         arrMap[x2][y2] = arrMap[x1][y1];
         arrMap[x1][y1] = " ";

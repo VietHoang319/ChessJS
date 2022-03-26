@@ -20,6 +20,8 @@ let redWin = false;
 let blackWin = false;
 let redPlayer = "rgb(128, 128, 128)";
 let blackPlayer = "white";
+let redChessDead = document.getElementById("redChessDeaddiv");
+let blackChessDead = document.getElementById("blackChessDeaddiv");
 
 function initialization() {
     drawCell();

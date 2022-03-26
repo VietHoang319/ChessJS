@@ -80,3 +80,15 @@ function getTeam(x, y) {
     }
     return team;
 }
+
+function getImg(x, y) {
+    let name = arrMap[x][y];
+    let img = "";
+    for (let i = 0; i < arrChess.length; i++) {
+        if (name === arrChess[i].name) {
+            img = arrChess[i].img;
+            break;
+        }
+    }
+    return img;
+}
