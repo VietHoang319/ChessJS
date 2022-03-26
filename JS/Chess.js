@@ -57,18 +57,6 @@ function getCheckmate(x, y) {
     }
 }
 
-function getChess(x, y) {
-    let name = arrMap[x][y];
-    let chess = "";
-    for (let i = 0; i < arrChess.length; i++) {
-        if (name === arrChess[i].name) {
-            chess = arrChess[i].chess;
-            break;
-        }
-    }
-    return chess;
-}
-
 function getTeam(x, y) {
     let name = arrMap[x][y];
     let team = "";
