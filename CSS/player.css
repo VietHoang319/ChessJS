@@ -1,0 +1,58 @@
+/*Người chơi đỏ*/
+#playerRdiv {
+    background-color: rgba(255, 0, 0, 0.80);
+    border-radius: 3%;
+    float: left;
+    height: 100%;
+    width: 23.25%;
+    margin: 1%;
+}
+
+#imgRdiv {
+    border: 2px solid;
+    border-radius: 50%;
+    background-color: white;
+    height: 70%;
+    width: 50%;
+    margin: 0 25%;
+}
+
+/*Người chơi đen*/
+#playerBdiv {
+    background-color: rgba(0, 0, 0, 0.64);
+    border-radius: 3%;
+    float: left;
+    height: 100%;
+    width: 23.25%;
+    margin: 1%;
+}
+
+#imgBdiv {
+    border: 2px solid;
+    border-radius: 50%;
+    background-color: white;
+    height: 70%;
+    width: 50%;
+    margin: 0 25%;
+}
+
+/* Chung*/
+.imgP {
+    width: 70%;
+    height: 70%;
+    margin-top: 10%;
+}
+
+.namePlayer {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 20px;
+    text-align: center;
+}
+
+.playerAvt {
+    border-bottom: 5px solid;
+    float: top;
+    height: 28%;
+    width: 90%;
+    margin: 5%;
+}

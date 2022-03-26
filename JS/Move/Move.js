@@ -67,7 +67,6 @@ function click(id) {
     if(isClick) {
         position = id;
         getMove(x, y);
-        console.log(arrMove)
     }
     else {
         if (checkMoveChess(position, id)){

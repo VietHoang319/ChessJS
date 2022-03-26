@@ -1,3 +1,19 @@
+#divMain{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#chessboarddiv {
+    float: left;
+    margin-bottom: 1.5%;
+    margin-top: 1.5%;
+    height: 100%;
+    width: 49.5%;
+}
+
 #chessboard {
     border: 2px solid black;
     border-collapse: collapse;
@@ -35,4 +51,25 @@ img {
     height: 80px;
     text-align: center;
     width: 40px;
+}
+
+@media only screen and (max-width: 1300px) {
+    #playerBdiv {
+        width: 0;
+    }
+    #chessboarddiv {
+        width: 73%;
+    }
+    #playerRdiv {
+        width: 23%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #chessboarddiv {
+        width: 96%;
+    }
+    #playerRdiv {
+        width: 0;
+    }
 }

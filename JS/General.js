@@ -43,10 +43,12 @@ function checkMoveChess(id, newid) {
         if (arrMap[x2][y2] === "rPawn" && x2 === "7") {
             arrMap[x2][y2] = "rQueen";
             document.getElementById("i" + newid).src = "../Pic/Chess/RQueen.png";
+            getCheckmate(+x2, +y2);
         }
         if (arrMap[x2][y2] === "bPawn" && x2 === "0") {
             arrMap[x2][y2] = "bQueen";
             document.getElementById("i" + newid).src = "../Pic/Chess/BQueen.png";
+            getCheckmate(+x2, +y2);
         }
 
         if (arrMap[x2][y2] === "rRook1") {
@@ -128,6 +130,8 @@ function checkMoveChess(id, newid) {
             }
         }
         getCheckmate(+x2, +y2);
+        console.log(checkmateB)
+        console.log(checkmateR)
         return check;
     }
 }
