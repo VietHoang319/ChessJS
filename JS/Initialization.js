@@ -18,6 +18,8 @@ let moveRedKing = true;    // biến kiểm tra vua đỏ
 let moveBlackKing = true;  // biến kiểm tra vua đen
 let redWin = false;
 let blackWin = false;
+let redPlayer = "rgb(128, 128, 128)";
+let blackPlayer = "white";
 
 function initialization() {
     drawCell();

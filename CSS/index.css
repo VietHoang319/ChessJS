@@ -4,7 +4,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     text-align: center;
-    padding: 22%;
+    padding-top: 20%;
 }
 
 @-webkit-keyframes my {
@@ -30,10 +30,21 @@ body {
 .play {
     font-family: 'Press Start 2P', cursive;
     text-decoration: none;
-    font-size:24px;
+    font-size:40px;
     font-weight:bold;
     -webkit-animation: my 700ms infinite;
     -moz-animation: my 700ms infinite;
     -o-animation: my 700ms infinite;
     animation: my 700ms infinite;
+}
+#info {
+    margin-top: 20%;
+    color: white;
+    font-size: 20px;
+    font-family: 'Lobster', cursive;
+}
+#from {
+    color: white;
+    font-size: 15px;
+    font-family: 'Lobster', cursive;
 }

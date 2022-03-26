@@ -148,3 +148,13 @@ function getMoveSound() {
     let audio = new Audio('ChessMoveSound.mp3');
     audio.play();
 }
+
+function changeColorPlayer() {
+    let tempR = redPlayer;
+    redPlayer = document.getElementById("imgRdiv").style.backgroundColor;
+    document.getElementById("imgRdiv").style.backgroundColor = tempR;
+
+    let tempB = blackPlayer;
+    blackPlayer = document.getElementById("imgBdiv").style.backgroundColor;
+    document.getElementById("imgBdiv").style.backgroundColor = tempB;
+}

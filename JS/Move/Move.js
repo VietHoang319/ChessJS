@@ -80,6 +80,7 @@ function click(id) {
                 location.reload();
             }
             flag = !flag;
+            changeColorPlayer();
         }
         arrMove.splice(0, arrMove.length);
         drawCell();
