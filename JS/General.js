@@ -142,8 +142,6 @@ function checkMoveChess(id, newid) {
             }
         }
         getCheckmate(+x2, +y2);
-        console.log(checkmateB)
-        console.log(checkmateR)
         return check;
     }
 }
@@ -157,7 +155,7 @@ function isRedTeam(x, y) {
 }
 
 function getMoveSound() {
-    let audio = new Audio('ChessMoveSound.mp3');
+    let audio = new Audio('Audio/ChessMoveSound.mp3');
     audio.play();
 }
 
@@ -165,8 +163,10 @@ function changeColorPlayer() {
     let tempR = redPlayer;
     redPlayer = document.getElementById("imgRdiv").style.backgroundColor;
     document.getElementById("imgRdiv").style.backgroundColor = tempR;
+    document.getElementById("nameRPlayer").style.color = tempR;
 
     let tempB = blackPlayer;
     blackPlayer = document.getElementById("imgBdiv").style.backgroundColor;
     document.getElementById("imgBdiv").style.backgroundColor = tempB;
+    document.getElementById("nameBPlayer").style.color = tempB;
 }

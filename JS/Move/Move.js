@@ -72,12 +72,12 @@ function click(id) {
         if (checkMoveChess(position, id)){
             // console.log(arrMap);
             if (redWin === true) {
-                alert('Người chơi đỏ thắng');
-                location.reload();
+                message.innerText = "Người chơi đỏ đã chiến thắng";
+                modal.style.display = "block";
             }
             if (blackWin === true) {
-                alert('Người chơi đen thắng');
-                location.reload();
+                message.innerText = "Người chơi đen đã chiến thắng";
+                modal.style.display = "block";
             }
             flag = !flag;
             changeColorPlayer();

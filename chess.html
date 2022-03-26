@@ -6,6 +6,7 @@
     <link rel="icon" href="Pic/chess.png" type="image/gif">
     <link rel="stylesheet" href="CSS/chess.css">
     <link rel="stylesheet" href="CSS/player.css">
+    <link rel="stylesheet" href="CSS/modal.css">
 </head>
 <body onload="initialization()">
 <div id="divMain">
@@ -14,7 +15,7 @@
             <div id="imgRdiv">
                 <img class="imgP" src="Pic/Player/red-king.png">
             </div>
-            <p class="namePlayer">Red king</p>
+            <p id="nameRPlayer">Red king</p>
         </div>
         <div id="blackChessDeaddiv"></div>
     </div>
@@ -147,9 +148,20 @@
             <div id="imgBdiv">
                 <img class="imgP" src="Pic/Player/black-king.png">
             </div>
-            <p class="namePlayer">Black king</p>
+            <p id="nameBPlayer">Black king</p>
         </div>
         <div id="redChessDeaddiv"></div>
+    </div>
+</div>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <h2>Chúc mừng</h2>
+        <div class="fomrgroup">
+            <p id="message"></p>
+        </div>
+        <div class="fomrgroup">
+            <button id="btnModal">OK</button>
+        </div>
     </div>
 </div>
 
@@ -163,5 +175,6 @@
 <script src="JS/Move/Rook.js"></script>
 <script src="JS/Move/Queen.js"></script>
 <script src="JS/Move/King.js"></script>
+<script src="JS/Modal.js"></script>
 </body>
 </html>

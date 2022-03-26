@@ -1,6 +1,6 @@
 /*Người chơi đỏ*/
 #playerRdiv {
-    background-color: rgba(255, 0, 0, 0.80);
+    background-color: rgba(255, 0, 0, 0.71);
     border-radius: 5%;
     float: left;
     height: 97%;
@@ -43,7 +43,15 @@
     margin-top: 10%;
 }
 
-.namePlayer {
+#nameRPlayer {
+    color: white;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 20px;
+    text-align: center;
+}
+
+#nameBPlayer {
+    color: rgb(255, 80, 80);
     font-family: 'Patrick Hand', cursive;
     font-size: 20px;
     text-align: center;
