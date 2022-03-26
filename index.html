@@ -14,11 +14,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
-<a class="play" href="chess.html"><p>PRESS START</p></a>
-<p id="info">Ngô Việt Hoàng / ArisSt319</p>
-<p id="from">From C0222H1 with love...</p>
-<audio autoplay loop>
-    <source src="Audio/audioIndex.mp3" type="audio/mpeg">
-</audio>
+<button onclick="getIntroSound()" style="border-radius: 50%; margin: 2%; padding: 10px"><img id="imgAudio" src="Pic/mute.png"></button>
+<div>
+    <a id="play" href="chess.html"><p>PRESS START</p></a>
+    <p id="info">Ngô Việt Hoàng / ArisSt319</p>
+    <p id="from">From C0222H1 with love...</p>
+    <audio id="audio" loop>
+<!--        <source src="Audio/audioIndex.mp3">-->
+        <source src="Audio/audioIntro.mp3">
+    </audio>
+</div>
+
+<script>
+    let flagAudio = false;
+    let audio = document.getElementById("audio");
+    let imgAudio = document.getElementById("imgAudio");
+    function getIntroSound() {
+        console.log(flagAudio)
+        audio.play();
+        audio.loop = true;
+        if (flagAudio === false) {
+            imgAudio.src = "Pic/unmute.png"
+            audio.muted = false;
+            flagAudio = true;
+        }
+        else {
+            imgAudio.src = "Pic/mute.png"
+            audio.muted = true;
+            flagAudio = false;
+        }
+    }
+</script>
 </body>
 </html>
