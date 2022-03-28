@@ -86,15 +86,14 @@ function checkMoveChess(id, newid) {
                 arrMap[0][7] = " ";
                 document.getElementById("i05").src = document.getElementById("i07").src;
                 document.getElementById("i07").src = "";
-                moveRedKing = false;
             }
             if (x2 === "0" && y2 === "2") {
                 arrMap[0][3] = arrMap[0][0];
                 arrMap[0][0] = " ";
                 document.getElementById("i03").src = document.getElementById("i00").src;
                 document.getElementById("i00").src = "";
-                moveRedKing = false;
             }
+            moveRedKing = false;
         }
 
         // Vua đen nhập thành
@@ -104,15 +103,14 @@ function checkMoveChess(id, newid) {
                 arrMap[7][7] = " ";
                 document.getElementById("i75").src = document.getElementById("i77").src;
                 document.getElementById("i77").src = "";
-                moveRedKing = false;
             }
             if (x2 === "7" && y2 === "2") {
                 arrMap[7][3] = arrMap[7][0];
                 arrMap[7][0] = " ";
                 document.getElementById("i73").src = document.getElementById("i70").src;
                 document.getElementById("i70").src = "";
-                moveRedKing = false;
             }
+            moveBlackKing = false;
         }
 
         // Kiểm tra chiếu vua
