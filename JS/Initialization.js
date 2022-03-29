@@ -92,11 +92,11 @@ function drawCell() {
             document.getElementById(i.toString() + j.toString()).style.backgroundColor = "rgb(255,255,255)";
             if(a % 2 !== 0 ){
                 if(b % 2 === 1)
-                    document.getElementById(i.toString() + j.toString()).style.backgroundColor = "rgb(72, 72, 72)";
+                    document.getElementById(i.toString() + j.toString()).style.backgroundColor = "rgba(72,72,72,0.84)";
             }
             else{
                 if(b % 2 !== 1)
-                    document.getElementById(i.toString() + j.toString()).style.backgroundColor = "rgb(72, 72, 72)";
+                    document.getElementById(i.toString() + j.toString()).style.backgroundColor = "rgba(72,72,72,0.84)";
             }
         }
     }
